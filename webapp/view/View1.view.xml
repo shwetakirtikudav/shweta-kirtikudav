@@ -1,0 +1,35 @@
+<mvc:View controllerName="Assign_disp_list_on_click.Assign_disp_list_on_click.controller.View1" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m"
+	xmlns:l="sap.ui.layout">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+					                <l:Splitter height="500px">
+                                             <List
+                                            id="emplist"
+                                            items="{/emp}"
+                                            headerText="Employee Data"
+                                            headerDesign="Standard"
+                                            footerText="End of the List"
+                                            noDataText="No Employees"
+                                            showNoData="true">
+                                            <items>
+                                            <StandardListItem title="{empid}" description="{empname}"
+                                            type="Navigation"
+                                            press="onItemPress" ></StandardListItem>
+                                            </items>
+                                            </List>
+                                            <ObjectHeader id="objectid"
+                                            title="{empid}"
+                                            intro="{empname}">
+                                            </ObjectHeader>
+                                            </l:Splitter>
+	
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
