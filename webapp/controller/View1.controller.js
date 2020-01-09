@@ -12,7 +12,7 @@ sap.ui.define([
                                                 {
                        emp: [{
                                                 empid: "1235",
-                                                empname: "Raj Sharma"
+                                                empname: "Ashwini Kasar"
                                 },
                                 {
                                                 empid: "2345",
