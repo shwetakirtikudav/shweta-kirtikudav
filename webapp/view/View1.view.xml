@@ -1,0 +1,76 @@
+<mvc:View controllerName="Assign_Emp_portal.Assign_Emp_portal.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"> 
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+<!--					<content></content>-->
+
+	<IconTabBar id="idIconTabBar" select="handleIconTabBarSelect" class="sapUiResponsiveContentPadding">
+     <items>
+      <IconTabFilter showAll="true" text="Details" key="All"/>
+      <IconTabSeparator/>
+      <IconTabFilter icon="sap-icon://hint" iconColor="Positive" text="Personal" key="Personal">
+       <content>
+        <l:Grid>
+         <Label text="Employee ID" labelFor="inputText"/>
+         <Input id="inputText" type="Text" class="sapUiSmallMarginBottom" placeholder="Enter Text ..."/>
+         <Label text="Email" labelFor="inputEmail"/>
+         <Input id="inputEmail" type="Email" class="sapUiSmallMarginBottom" placeholder="Enter Email ..."/>
+         <Label text="Telephone" labelFor="inputTel"/>
+         <Input id="inputTel" type="Tel" class="sapUiSmallMarginBottom" placeholder="Enter Telephone Number ..."/>
+         <Label text="Number" labelFor="inputNumber"/>
+         <Input id="inputNumber" type="Number" class="sapUiSmallMarginBottom" placeholder="Enter a Number ..."/>
+         <Label text="URL" labelFor="inputUrl"/>
+         <Input id="inputUrl" type="Url" class="sapUiSmallMarginBottom" placeholder="Enter URL ..."/>
+        </l:Grid>
+       </content>
+      </IconTabFilter>
+      <IconTabFilter icon="sap-icon://notes" iconColor="Critical" text="Core skils" key="Core skills">
+       <content>
+        <Table noDataText="Drop column list items here and columns in the area above" id="table0">
+         <items>
+          <ColumnListItem type="Active" id="item0">
+           <cells>
+           
+            <Input type ="Text" />
+            <Input type= "Text" /></cells>
+          </ColumnListItem>
+         </items>
+         <columns> 
+          <Column id="column0">
+           <header>
+            <Label text="Technical Skills" id="label5"/>
+           </header>
+          </Column>
+          <Column id="column1">
+           <header>
+            <Label text="Personal Skills" id="label6"/>
+           </header>
+          </Column>
+         </columns>
+        </Table>
+       </content>
+      </IconTabFilter>
+      <IconTabFilter icon="sap-icon://attachment" iconColor="Negative" text="Languages" key="Languages">
+       <l:VerticalLayout>
+        <Text text="Which languages(s) do you speak?"/>
+        <CheckBox text="select / deselect all" selected="{= ${/child1} || ${/child2} || ${/child3} || ${/child4} }"
+         partiallySelected="{= !(${/child1} &amp;&amp; ${/child2} &amp;&amp; ${/child3} &amp;&amp; ${/child4})}" select="onParentClicked"/>
+        <CheckBox text="English" selected="{/child1}"/>
+        <CheckBox text="German" selected="{/child2}"/>
+        <CheckBox text="French" selected="{/child3}"/>
+        <CheckBox text="Hindi" selected="{/child4}"/>
+       </l:VerticalLayout>
+     
+      </IconTabFilter>
+     
+     </items>
+    </IconTabBar>
+
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
